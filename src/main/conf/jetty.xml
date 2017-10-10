@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://jetty.mortbay.org/configure.dtd">
+<Configure id="generator" class="org.mortbay.jetty.Server">
+
+	<Set name="ThreadPool">
+		<New class="org.mortbay.thread.BoundedThreadPool">
+			<Set name="minThreads">2</Set>
+			<Set name="maxThreads">20</Set>
+			<Set name="lowThreads">2</Set>
+		</New>
+	</Set>
+
+	<Call name="addConnector">
+		<Arg>
+			<New class="org.mortbay.jetty.nio.SelectChannelConnector">
+				<Set name="port">
+					<SystemProperty name="jetty.port" default="6789" />
+				</Set>
+				<Set name="maxIdleTime">30000</Set>
+				<Set name="Acceptors">2</Set>
+				<Set name="statsOn">false</Set>
+				<Set name="confidentialPort">6443</Set>
+				<Set name="lowResourcesConnections">3000</Set>
+				<Set name="lowResourcesMaxIdleTime">3000</Set>
+			</New>
+		</Arg>
+	</Call>
+	<Set name="handler">
+		<New id="Handlers" class="org.mortbay.jetty.handler.HandlerCollection">
+			<Set name="handlers">
+				<Array type="org.mortbay.jetty.Handler">
+					<Item>
+						<New id="Contexts" class="org.mortbay.jetty.handler.ContextHandlerCollection" />
+					</Item>
+					<Item>
+						<New id="DefaultHandler" class="org.mortbay.jetty.handler.DefaultHandler" />
+					</Item>
+					<Item>
+						<New id="RequestLog" class="org.mortbay.jetty.handler.RequestLogHandler" />
+					</Item>
+				</Array>
+			</Set>
+		</New>
+	</Set>
+	
+	<Set name="handler">
+		<New id="Handlers" class="org.mortbay.jetty.handler.HandlerCollection">
+			<Set name="handlers">
+				<Array type="org.mortbay.jetty.Handler">
+					<Item>
+						<New class="org.mortbay.jetty.webapp.WebAppContext">
+							<Set name="contextPath">/</Set><!-- ContextPath -->
+							<Set name="resourceBase">./</Set><!-- Web应用根目录 -->
+							<Call name="addServlet">
+								<Arg>org.md100.framework.generator.web.PortalServlet</Arg>
+								<Arg>/*</Arg>
+							</Call>
+						</New>
+					</Item>
+				</Array>
+			</Set>
+		</New>
+	</Set>
+</Configure>
