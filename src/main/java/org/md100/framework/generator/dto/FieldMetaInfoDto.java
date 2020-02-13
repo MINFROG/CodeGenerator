@@ -2,7 +2,7 @@ package org.md100.framework.generator.dto;
 
 /**
  * 该类代表的意思为一个数据库表的字段元数据
- * @author jack_wu
+ * @author yhp
  *
  */
 public class FieldMetaInfoDto {
