@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 元数据读取：读取数据库表、字段的元数据，用以代码生成
- * @author jack_wu
+ * @author yhp
  *
  */
 public class DatabaseMetaService {
