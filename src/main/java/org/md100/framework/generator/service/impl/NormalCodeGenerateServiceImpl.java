@@ -17,7 +17,7 @@ import org.md100.framework.generator.service.ICodeGenerateService;
 
 /**
  * 代码生成核心类
- * @author jack_wu
+ * @author yhp
  *
  */
 public class NormalCodeGenerateServiceImpl implements ICodeGenerateService{
