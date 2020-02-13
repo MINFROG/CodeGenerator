@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * 该类代表的意思为一个数据库表的元数据对象
- * @author jack_wu
+ * @author yhp
  *
  */
 public class TableMetaInfoDto {
