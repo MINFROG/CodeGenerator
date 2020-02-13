@@ -9,7 +9,7 @@ import org.md100.framework.generator.service.DatabaseMetaService;
 
 /**
  * dubbo代码生成核心类
- * @author jack_wu
+ * @author yhp
  *
  */
 public class DubboCodeGenerateServiceImpl extends BaseCodeGenerateService{
