@@ -17,7 +17,7 @@ import freemarker.template.Template;
 
 /**
  * 内容生成类：根据数据和模板文件生成内容（即代码）
- * @author jack_wu
+ * @author yhp
  *
  */
 public class ContentGenerator {
