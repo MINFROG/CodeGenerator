@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 代码生成服务启动类
- * @author jack_wu
+ * @author yhp
  *
  */
 public class Main {
