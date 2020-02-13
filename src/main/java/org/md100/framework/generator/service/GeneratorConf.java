@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 记录使用该代码生成器时开发人员在界面上设计的一些配置，记在JVM内存；
- * @author jack_wu
+ * @author yhp
  *
  */
 public class GeneratorConf {
