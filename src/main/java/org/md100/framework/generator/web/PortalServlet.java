@@ -24,7 +24,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 代码生成器的WEB入口
- * @author jack_wu
+ * @author yhp
  *
  */
 public class PortalServlet extends HttpServlet {
